@@ -1,0 +1,36 @@
+.main{
+    align-items: center;
+	}
+	
+.speechtxt{
+	
+	width:100px;
+	float: left;
+	font-size:25px;
+	height: 40px;
+
+}
+.speak
+{
+	
+	width:600px;
+	float: left;
+	height: 40px;
+
+}
+.speak input{
+
+width: 598px;
+height: 38px;
+font-size: 25px;
+}
+
+
+
+.speak input:hover
+{
+
+	box-shadow: 5px 5px 5px 5px #E7E4E4;
+	border: 0px;
+
+}
