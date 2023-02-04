@@ -1,18 +1,19 @@
 package test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 public class test2 {
-
 	public static void main(String[] args) {
+		
 		WebDriver driver=new ChromeDriver();
-		driver.get("http://localhost/search/loginvia.php");
-		driver.manage().window().maximize();
-		driver.findElement(By.name("email")).sendKeys("vimal@gmail.com");
-		driver.findElement(By.name("password")).sendKeys("Vimal@123");
-		driver.findElement(By.name("submit")).click();
-
+		driver.get("http://localhost/search/result.php?searchbar=social+media&search1=search");
+		
+		java.util.List<WebElement> links = driver.findElements(By.tagName("a"));
+	 	System.out.println("Total links are"+links.size());
+	 	for (int i = 0; i<links.size(); i=i+1)
+	 	{
+	 		System.out.println("Link "+ i + "	Link name "+ links.get(i).getText());
+	 	}
 	}
-
 }
